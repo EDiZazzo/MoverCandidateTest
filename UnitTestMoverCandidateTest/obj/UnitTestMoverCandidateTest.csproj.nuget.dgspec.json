@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\UnitTestMoverCandidateTest\\UnitTestMoverCandidateTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest.csproj",
+        "projectName": "MoverCandidateTest",
+        "projectPath": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest.csproj",
+        "packagesPath": "C:\\Users\\Emanu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emanu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ErazerBrecht.Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.8.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\UnitTestMoverCandidateTest\\UnitTestMoverCandidateTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\UnitTestMoverCandidateTest\\UnitTestMoverCandidateTest.csproj",
+        "projectName": "UnitTestMoverCandidateTest",
+        "projectPath": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\UnitTestMoverCandidateTest\\UnitTestMoverCandidateTest.csproj",
+        "packagesPath": "C:\\Users\\Emanu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\UnitTestMoverCandidateTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emanu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest.csproj": {
+                "projectPath": "C:\\Users\\Emanu\\OneDrive\\Desktop\\Mover Test\\MoverCandidateTestDotNet6\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest\\MoverCandidateTest.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

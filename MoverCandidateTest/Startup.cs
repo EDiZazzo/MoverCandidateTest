@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MoverCandidateTest.Config;
+using MoverCandidateTest.Controllers.Config;
+using MoverCandidateTest.Inventory.EntityFramework;
 
 namespace MoverCandidateTest
 {
@@ -25,6 +28,9 @@ namespace MoverCandidateTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.DependencyInjectionConfig();
+            services.SwaggerServicesConfig();
+            services.DatabaseConfig();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,12 +43,18 @@ namespace MoverCandidateTest
 
             app.UseRouting();
 
+            app.SwaggerAppConfig(env);
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
+            var context = serviceScope.ServiceProvider.GetRequiredService<EfInventoryItemContext>();
+            context.Database.EnsureCreated();
         }
     }
 }
