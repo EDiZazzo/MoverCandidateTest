@@ -18,7 +18,6 @@ namespace UnitTestMoverCandidateTest.ServiceTest
             {
                 new InventoryItem { Sku = "SKU001", Description = "Description 1", Quantity = 10 },
                 new InventoryItem { Sku = "SKU002", Description = "Description 2", Quantity = 15 }
-                // Add more sample items if needed
             };
             queryMock.Setup(q => q.GetAllItems()).ReturnsAsync(inventoryItems);
             var service = new GetAllItemsService(queryMock.Object);

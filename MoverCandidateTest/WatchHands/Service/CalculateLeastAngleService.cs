@@ -9,7 +9,7 @@ public class CalculateLeastAngleService: ICalculateLeastAngleService
     {
         var dateTime = dateTimeFromRequest.ParseRequestModelDateTime();
         
-        // I could make easier writing right values instead of multiple operations, but in this way is more readable
+        //I could simplify this by using direct values instead of multiple operations, but I've chosen this approach for better readability.
         var hourAngle = dateTime.Hour * 360 / 12 + dateTime.Minute * 30 / 60 + dateTime.Second * 0.5 / 60;
         var minuteAngle = dateTime.Minute * 360 / 60 + dateTime.Second * 6 / 60 ;
 

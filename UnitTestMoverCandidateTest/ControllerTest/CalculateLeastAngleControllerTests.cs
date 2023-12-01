@@ -36,7 +36,7 @@ namespace UnitTestMoverCandidateTest.ControllerTest
         {
             // Arrange
             var validRequest = new CalculateLeastAngleRequestModel(new DateTime(1, 1, 1, 0,30,0));
-            var leastAngle = 172.5; // Replace this with the expected result
+            var leastAngle = 172.5;
 
             _validatorMock.Setup(validator => validator.Validate(validRequest))
                 .Returns(new FluentValidation.Results.ValidationResult());
@@ -52,7 +52,7 @@ namespace UnitTestMoverCandidateTest.ControllerTest
             Assert.That(result.StatusCode, Is.EqualTo(StatusCodes.Status200OK));
             Assert.IsNotNull(result.Value);
             Assert.IsInstanceOf<CalculateLeastAngleResponseModel>(result.Value);
-            Assert.That(((CalculateLeastAngleResponseModel)result.Value).LeastAngle, Is.EqualTo(leastAngle)); // Verify the result
+            Assert.That(((CalculateLeastAngleResponseModel)result.Value).LeastAngle, Is.EqualTo(leastAngle));
         }
 
         [Test]

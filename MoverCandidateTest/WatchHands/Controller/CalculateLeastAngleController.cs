@@ -34,12 +34,10 @@ namespace MoverCandidateTest.WatchHands.Controller
             {
                 return BadRequest(validationResult.Errors);
             }
-
-            // Calculate the least angle
+            
             var leastAngle = _calculateLeastAngleService.CalculateLeastAngle(
                 requestModel.DateTime);
 
-            // Return the result
             return Ok(new CalculateLeastAngleResponseModel(leastAngle));
         }
     }
