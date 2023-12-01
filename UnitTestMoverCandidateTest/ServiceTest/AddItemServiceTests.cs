@@ -5,7 +5,7 @@ using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Query;
 using MoverCandidateTest.Inventory.Service;
 
-namespace UnitTestMoverCandidateTest
+namespace UnitTestMoverCandidateTest.ServiceTest
 {
     [TestFixture]
     public class AddItemServiceTests

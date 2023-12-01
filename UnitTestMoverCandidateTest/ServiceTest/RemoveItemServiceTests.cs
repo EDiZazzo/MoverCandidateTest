@@ -49,7 +49,7 @@ namespace UnitTestMoverCandidateTest.ServiceTest
             uint quantity = 5;
             var existingItem = new InventoryItem(sku, "Existing Item", 10);
             _mockGetQuery.Setup(q => q.GetItem(sku)).ReturnsAsync(existingItem);
-            _mockDeleteCommand.Setup(d => d.RemoveQuantity(existingItem, quantity)).ReturnsAsync((InventoryItem)null);
+            _mockDeleteCommand.Setup(d => d.RemoveQuantity(sku, quantity)).ReturnsAsync((InventoryItem)null);
 
             // Act
             var result = await _removeItemService.RemoveItem(sku, quantity);
@@ -90,7 +90,7 @@ namespace UnitTestMoverCandidateTest.ServiceTest
             var existingItem = new InventoryItem(sku, "Existing Item", 10);
             var expectedDeletedItem = new InventoryItem(sku, "Existing Item", 5);
             _mockGetQuery.Setup(q => q.GetItem(sku)).ReturnsAsync(existingItem);
-            _mockDeleteCommand.Setup(d => d.RemoveQuantity(existingItem, quantity)).ReturnsAsync(expectedDeletedItem);
+            _mockDeleteCommand.Setup(d => d.RemoveQuantity(sku, quantity)).ReturnsAsync(expectedDeletedItem);
 
             // Act
             var result = await _removeItemService.RemoveItem(sku, quantity);
@@ -111,7 +111,7 @@ namespace UnitTestMoverCandidateTest.ServiceTest
             uint quantity = 5;
             var existingItem = new InventoryItem(sku, "Existing Item", 10);
             _mockGetQuery.Setup(q => q.GetItem(sku)).ReturnsAsync(existingItem);
-            _mockDeleteCommand.Setup(d => d.RemoveQuantity(existingItem, quantity)).ThrowsAsync(new Exception());
+            _mockDeleteCommand.Setup(d => d.RemoveQuantity(sku, quantity)).ThrowsAsync(new Exception());
 
             // Act
             var result = await _removeItemService.RemoveItem(sku, quantity);

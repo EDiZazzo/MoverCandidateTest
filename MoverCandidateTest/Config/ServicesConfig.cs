@@ -1,6 +1,5 @@
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using MoverCandidateTest.Controllers.Inventory.Service;
 using MoverCandidateTest.Inventory.Command;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Query;

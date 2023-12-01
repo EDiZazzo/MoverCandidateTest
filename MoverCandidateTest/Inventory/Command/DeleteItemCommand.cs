@@ -14,11 +14,11 @@ public class DeleteItemCommand: IDeleteItemCommand
         _dbContext = dbContext;
     }
     
-    public async Task<InventoryItem?> RemoveQuantity(InventoryItem item, uint quantity)
+    public async Task<InventoryItem?> RemoveQuantity(string sku, uint quantity)
     {
         try
         {
-            var itemToUpdate = await _dbContext.Inventory.FindAsync(item.Sku);
+            var itemToUpdate = await _dbContext.Inventory.FindAsync(sku);
             
             if (itemToUpdate == null) return null;
             

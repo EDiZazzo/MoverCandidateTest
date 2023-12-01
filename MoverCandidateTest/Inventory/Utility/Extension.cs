@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MoverCandidateTest.Inventory.Model;
 
-namespace MoverCandidateTest.Inventory.Extension;
+namespace MoverCandidateTest.Inventory.Utility;
 
 public static class Extension
 {

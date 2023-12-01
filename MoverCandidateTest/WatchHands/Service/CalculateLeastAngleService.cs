@@ -1,5 +1,5 @@
 using System;
-using MoverCandidateTest.WatchHands.Extension;
+using MoverCandidateTest.WatchHands.Utility;
 
 namespace MoverCandidateTest.WatchHands.Service;
 

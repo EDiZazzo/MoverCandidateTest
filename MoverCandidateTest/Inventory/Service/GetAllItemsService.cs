@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using MoverCandidateTest.Controllers.Inventory.Service;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Query;
 using static MoverCandidateTest.Inventory.Utility.ResultUtility;

@@ -1,8 +1,7 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using MoverCandidateTest.Inventory.Model;
 
-namespace MoverCandidateTest.Controllers.Inventory.Service;
+namespace MoverCandidateTest.Inventory.Service;
 
 public interface IGetAllItemsService
 {

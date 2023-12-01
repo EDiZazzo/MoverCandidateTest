@@ -1,16 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MoverCandidateTest.Controllers.Inventory.Service;
-using MoverCandidateTest.Inventory.Extension;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Service;
+using MoverCandidateTest.Inventory.Utility;
 
 namespace MoverCandidateTest.Inventory.Controller
 {

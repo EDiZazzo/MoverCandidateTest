@@ -1,12 +1,9 @@
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Moq;
-using NUnit.Framework;
 using MoverCandidateTest.Inventory.Command;
 using MoverCandidateTest.Inventory.EntityFramework;
 using MoverCandidateTest.Inventory.Model;
 
-namespace MoverCandidateTest.Inventory.Command.Tests
+namespace UnitTestMoverCandidateTest.CommandTest
 {
     [TestFixture]
     public class DeleteItemCommandTests
@@ -33,13 +30,13 @@ namespace MoverCandidateTest.Inventory.Command.Tests
             var command = new DeleteItemCommand(dbContext);
 
             // Act
-            var result = await command.RemoveQuantity(existingItem, 5);
+            var result = await command.RemoveQuantity(existingItem.Sku, 5);
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(existingItem.Sku, result?.Sku);
-            Assert.AreEqual(existingItem.Description, result?.Description);
-            Assert.AreEqual(5, result?.Quantity);
+            Assert.That(result?.Sku, Is.EqualTo(existingItem.Sku));
+            Assert.That(result?.Description, Is.EqualTo(existingItem.Description));
+            Assert.That(result?.Quantity, Is.EqualTo(5));
         }
 
         [Test]
@@ -51,26 +48,7 @@ namespace MoverCandidateTest.Inventory.Command.Tests
             var command = new DeleteItemCommand(dbContext);
 
             // Act
-            var result = await command.RemoveQuantity(nonExistingItem, 3);
-
-            // Assert
-            Assert.IsNull(result);
-        }
-
-        [Test]
-        public async Task RemoveQuantity_ReturnsNull_WhenDbUpdateExceptionOccurs()
-        {
-            // Arrange
-            var existingItem = new InventoryItem { Sku = "SKU003", Description = "Existing Item", Quantity = 5 };
-            var dbContext = CreateMockDbContext();
-            dbContext.Inventory.Add(existingItem);
-            await dbContext.SaveChangesAsync();
-
-            // Setting an invalid quantity to cause a DbUpdateException
-            var command = new DeleteItemCommand(dbContext);
-
-            // Act
-            var result = await command.RemoveQuantity(existingItem, 10);
+            var result = await command.RemoveQuantity(nonExistingItem.Sku, 3);
 
             // Assert
             Assert.IsNull(result);

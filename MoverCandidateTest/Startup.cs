@@ -10,7 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MoverCandidateTest.Config;
-using MoverCandidateTest.Controllers.Config;
 using MoverCandidateTest.Inventory.EntityFramework;
 
 namespace MoverCandidateTest
@@ -51,10 +50,6 @@ namespace MoverCandidateTest
             {
                 endpoints.MapControllers();
             });
-
-            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
-            var context = serviceScope.ServiceProvider.GetRequiredService<EfInventoryItemContext>();
-            context.Database.EnsureCreated();
         }
     }
 }

@@ -38,10 +38,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "ErazerBrecht.Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.8.1, )"
@@ -66,10 +62,6 @@
               "target": "Package",
               "version": "[6.0.25, )"
             },
-            "SQLite": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -77,10 +69,6 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.5.0, )"
-            },
-            "System.Data.SQLite.Core": {
-              "target": "Package",
-              "version": "[1.0.118, )"
             }
           },
           "imports": [

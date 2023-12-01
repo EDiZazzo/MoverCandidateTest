@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using MoverCandidateTest.Controllers.Inventory.Service;
 using MoverCandidateTest.Inventory.Controller;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Service;

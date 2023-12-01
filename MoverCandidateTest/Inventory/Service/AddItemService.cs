@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using MoverCandidateTest.Controllers.Inventory.Service;
 using MoverCandidateTest.Inventory.Command;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Query;

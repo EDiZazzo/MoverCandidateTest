@@ -24,7 +24,7 @@ public class CreateItemCommand : ICreateItemCommand
 
             return item;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             return null;
         }

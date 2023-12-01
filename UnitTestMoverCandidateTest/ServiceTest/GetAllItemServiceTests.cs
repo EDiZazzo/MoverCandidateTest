@@ -28,9 +28,9 @@ namespace UnitTestMoverCandidateTest.ServiceTest
 
             // Assert
             Assert.IsTrue(result.IsSuccessfully);
-            Assert.AreEqual(StatusCodes.Status200OK, result.StatusCode);
+            Assert.That(result.StatusCode, Is.EqualTo(StatusCodes.Status200OK));
             Assert.IsEmpty(result.ErrorMessage);
-            Assert.AreEqual(inventoryItems, result.Inventory);
+            Assert.That(result.Inventory, Is.EqualTo(inventoryItems));
         }
 
         [Test]
@@ -46,8 +46,8 @@ namespace UnitTestMoverCandidateTest.ServiceTest
 
             // Assert
             Assert.IsFalse(result.IsSuccessfully);
-            Assert.AreEqual(StatusCodes.Status500InternalServerError, result.StatusCode);
-            Assert.AreEqual("An error occurred while processing the internal database operation.", result.ErrorMessage);
+            Assert.That(result.StatusCode, Is.EqualTo(StatusCodes.Status500InternalServerError));
+            Assert.That(result.ErrorMessage, Is.EqualTo("An error occurred while processing the internal database operation."));
             Assert.IsEmpty(result.Inventory);
         }
     }

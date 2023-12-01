@@ -5,5 +5,5 @@ namespace MoverCandidateTest.Inventory.Command;
 
 public interface IDeleteItemCommand
 {
-    Task<InventoryItem?> RemoveQuantity(InventoryItem item, uint quantity);
+    Task<InventoryItem?> RemoveQuantity(string sku, uint quantity);
 }

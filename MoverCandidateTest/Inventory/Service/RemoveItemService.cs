@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using MoverCandidateTest.Inventory.Command;
 using MoverCandidateTest.Inventory.Model;
 using MoverCandidateTest.Inventory.Query;
@@ -47,7 +46,7 @@ namespace MoverCandidateTest.Inventory.Service
 
             try
             {
-                deletedItem = await _deleteItemCommand.RemoveQuantity(itemToReduce, quantity);
+                deletedItem = await _deleteItemCommand.RemoveQuantity(itemToReduce.Sku, quantity);
             }
             catch
             {
